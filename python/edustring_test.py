@@ -1,7 +1,7 @@
 from edustring import EduString
 
 es = EduString("TEST STRING 1")
-ts = es.toString();
+ts = str(es)
 
 print "TEST START \"" 	+ ts + "\"; LEN : " 		+ str(len(ts))
 print "TEST[1]: 0 = " 	+ str(ts.find("TEST")) 		+ " = " + str(es.simpleSearch("TEST"));

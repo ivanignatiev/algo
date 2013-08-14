@@ -4,7 +4,7 @@ class EduString:
 	def __init__(self, str):
 		self.__str = str
 
-	def toString(self):
+	def __str__(self):
 		return self.__str
 
 	'''
