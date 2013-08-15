@@ -17,15 +17,18 @@ class EduString:
 			return 0
 		index = 0
 		sublen = 0
-		while (index < len(self.__str)):
-			while (index < len(self.__str) 
+		dlen = len(self.__str) - len(needle) + 1
+		if (dlen <= 0):
+			return -1
+		while (index < dlen):
+			while (index < dlen
 					and needle[0] != self.__str[index]):
 				index = index + 1
-			while (sublen < len(needle) 
-					and index < len(self.__str) 
-					and needle[sublen] == self.__str[index + sublen]):
-				sublen = sublen + 1
-			if (sublen == len(needle)):
-				return (index)
+			if (index < dlen):
+				while (sublen < len(needle) 
+						and needle[sublen] == self.__str[index + sublen]):
+					sublen = sublen + 1
+				if (sublen == len(needle)):
+					return (index)
 			index = index + 1
 		return -1
