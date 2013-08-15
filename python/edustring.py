@@ -9,7 +9,7 @@ class EduString:
 
 	'''
 		Simple substring search
-		O(n * k) , n = len(_str), k = len(needle)
+		O((n - k) * k) , n = len(__str), k = len(needle)
 		@param string needle Substring
 	'''
 	def simpleSearch(self, needle):
